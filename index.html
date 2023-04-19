@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="paperChecker.js"></script>
+</head>
+
+<body>
+    <div id="root" class="center-flex-col">
+        <div id="main-heading" class="center-flex-col back-card">
+            <h1>JEE Response Analyser</h1>
+            <p>Here you can upload your JEE Mains 2nd Attempt Responses and get calculated marks along with brief
+                analytics.</p>
+        </div>
+        <div id="main-info" class="center-flex-col back-card">
+            <h3>How to upload?</h6>
+                <ul>
+                    <li>
+                        <p>Login to the NTA Portal.</p>
+                    </li>
+                    <li>
+                        <p>Open the responses page (Click the BTech button to open the responses page in a new tab)</p>
+                    </li>
+                    <li>
+                        <p>After opening it, hit Ctrl+S (or basically save the webpage) anywhere in your device</p>
+                    </li>
+                    <li>
+                        <p>After saving, hit the Upload Responses button below and upload the HTML file generated from
+                            previous step.</p>
+                    </li>
+                </ul>
+                <h4>Note: Only HTML pages are accepted. If you're on mobile you might get an .aspx file instead of
+                    .html. In that case, considering logging in through a PC and then repeating above steps.</h4>
+        </div>
+        <div id="upload-area" class="center-flex-col back-card back-card-wide-variant">
+            <h3>Upload the Responses File:</h3>
+            <input type="file" id="response-document">
+            <button onClick="runAnalytics()">Calculate</button>
+        </div>
+        <br>
+        <div id="analytics" class="center-flex-col back-card back-card-wide-variant hidden-el">
+            <h1>Analysis Report</h1>
+            <div class="analytics-row-item">
+                <h3>Total marks:</h3>
+                <h3 id="data-total-marks"></h3>
+
+            </div>
+            <br>
+            <div class="analytics-row-item">
+                <h3>Correct:</h3>
+                <h3 id="data-correct-questions"></h3>
+            </div>
+            <div class="analytics-row-item">
+                <h3>Incorrect:</h3>
+                <h3 id="data-incorrect-questions"></h3>
+            </div>
+            <div class="analytics-row-item">
+                <h3>Not Attempted:</h3>
+                <h3 id="data-notattempted-questions"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
