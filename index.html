@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Response Calculator</title>
+    <title>JEE Response Anaylser</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="paperChecker.js"></script>
 </head>
 
 <body>
     <div id="root" class="center-flex-col">
         <div id="main-heading" class="center-flex-col back-card">
-            <h1>JEE Response Analyser</h1>
-            <p>Here you can upload your JEE Mains 2nd Attempt Responses and get calculated marks along with brief
+            <h1>JEE Mains 2023 Response Analyser</h1>
+            <p>Here you can upload your JEE Mains 2023 2nd Attempt Responses and get calculated marks along with brief
                 analytics.</p>
         </div>
         <div id="main-info" class="center-flex-col back-card">
-            <h3>How to upload?</h6>
-                <ul>
-                    <li>
-                        <p>Login to the NTA Portal.</p>
-                    </li>
-                    <li>
-                        <p>Open the responses page (Click the BTech button to open the responses page in a new tab)</p>
-                    </li>
-                    <li>
-                        <p>After opening it, hit Ctrl+S (or basically save the webpage) anywhere in your device</p>
-                    </li>
-                    <li>
-                        <p>After saving, hit the Upload Responses button below and upload the HTML file generated from
-                            previous step.</p>
-                    </li>
-                </ul>
-                <h4>Note: Only HTML pages are accepted. If you're on mobile you might get an .aspx file instead of
-                    .html. In that case, considering logging in through a PC and then repeating above steps.</h4>
+            <h2>How to upload?</h2>
+            <ul>
+                <li>
+                    <p>Login to the NTA Portal.</p>
+                </li>
+                <li>
+                    <p>Open the responses page (Click the BTech button to open the responses page in a new tab)</p>
+                </li>
+                <li>
+                    <p>After opening it, hit Ctrl+S (or basically save the webpage) anywhere in your device</p>
+                </li>
+                <li>
+                    <p>After saving, hit the Upload Responses button below and upload the HTML file generated from
+                        previous step.</p>
+                </li>
+            </ul>
+            <h4>Note: Only HTML pages are accepted. If you're on mobile you might get an .aspx file instead of
+                .html. In that case, considering logging in through a PC and then repeating above steps.</h4>
         </div>
         <div id="upload-area" class="center-flex-col back-card back-card-wide-variant">
-            <h3>Upload the Responses File:</h3>
-            <input type="file" id="response-document">
+            <h2>Upload the Response File</h2>
+            <div id="upload-error-card" class="upload-error-card hidden-el">
+                <i class="fa fa-warning error-symbol"></i>
+                <p id="upload-error-text-disp"></p>
+            </div>
+            <input type="file" id="response-document" accept=".html,.mhtml,.htm,.xhtml">
             <button onClick="runAnalytics()">Calculate</button>
         </div>
         <br>

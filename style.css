@@ -15,6 +15,53 @@ body {
   min-height: 100%;
 }
 
+p {
+  margin: 5px;
+  padding: 3px;
+}
+
+#root {
+  margin: 5vh 20vw;
+}
+
+#upload-area input {
+  margin: 10px;
+}
+#upload-area button {
+  border: none;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: large;
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+}
+#upload-area button:hover {
+  border: 2px solid #2c2f33;
+  color: black;
+  background-color: white;
+}
+
+.upload-error-card {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+.upload-error-card .error-symbol {
+  color: white;
+  font-size: 36px;
+}
+
 .center-flex-col {
   display: flex;
   flex-direction: column;
@@ -39,16 +86,15 @@ body {
   margin: 5px;
 }
 
-#root {
-  margin: 15px;
-  margin: 5vh 20vw;
-}
-
-p {
-  margin: 5px;
-  padding: 3px;
-}
-
 .hidden-el {
   display: none;
+}
+
+@media screen and (max-width: 760px) {
+  #root {
+    margin: 5vh 10vw;
+  }
+  #main-info ul {
+    padding: 0 0 0 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
