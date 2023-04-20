@@ -47,25 +47,52 @@
             <button onClick="runAnalytics()">Calculate</button>
         </div>
         <br>
-        <div id="analytics" class="center-flex-col back-card back-card-wide-variant hidden-el">
-            <h1>Analysis Report</h1>
-            <div class="analytics-row-item">
+        <div id="score-card" class="center-flex-col back-card back-card-wide-variant hidden-el">
+            <h1>Score Card</h1>
+            <div class="score-card-row-item">
                 <h3>Total marks:</h3>
                 <h3 id="data-total-marks"></h3>
 
             </div>
             <br>
-            <div class="analytics-row-item">
+            <div class="score-card-row-item">
                 <h3>Correct:</h3>
                 <h3 id="data-correct-questions"></h3>
             </div>
-            <div class="analytics-row-item">
+            <div class="score-card-row-item">
                 <h3>Incorrect:</h3>
                 <h3 id="data-incorrect-questions"></h3>
             </div>
-            <div class="analytics-row-item">
+            <div class="score-card-row-item">
                 <h3>Not Attempted:</h3>
                 <h3 id="data-notattempted-questions"></h3>
+            </div>
+        </div>
+        <div id="analytics" class="center-flex-col back-card hidden-el">
+            <h2 class="analytics-table-root-heading">Analytics</h2>
+            <div id="analytics-table-sets" class="analytics-table-sets-inner-flex">
+
+                <table id="analytics-table-root-1" class="analytics-table-root">
+                    <thead>
+                        <td>Question ID</td>
+                        <td>Marks Obtained</td>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <table id="analytics-table-root-2" class="analytics-table-root">
+                    <thead>
+                        <td>Question ID</td>
+                        <td>Marks Obtained</td>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <table id="analytics-table-root-3" class="analytics-table-root">
+                    <thead>
+                        <td>Question ID</td>
+                        <td>Marks Obtained</td>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>

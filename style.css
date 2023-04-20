@@ -21,7 +21,7 @@ p {
 }
 
 #root {
-  margin: 5vh 20vw;
+  margin: 5vh 15vw;
 }
 
 #upload-area input {
@@ -48,6 +48,40 @@ p {
   background-color: white;
 }
 
+#analytics {
+  width: 100%;
+}
+#analytics table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 5px;
+  border-collapse: collapse;
+  border: 2px solid white;
+}
+#analytics table th,
+#analytics table td {
+  padding: 5px 10px;
+  text-align: center;
+}
+#analytics table thead {
+  font-weight: bold;
+  font-size: large;
+}
+#analytics table thead tr,
+#analytics table thead td {
+  padding: 15px;
+}
+#analytics table tbody tr:nth-child(odd) {
+  background-color: #2c2f33;
+}
+
+.analytics-table-sets-inner-flex {
+  display: flex;
+}
+.analytics-table-sets-inner-flex table {
+  margin: 30px;
+}
+
 .upload-error-card {
   display: flex;
   align-items: center;
@@ -64,9 +98,9 @@ p {
 
 .center-flex-col {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 2vh 0;
+  flex-direction: column;
 }
 
 .back-card {
@@ -78,11 +112,11 @@ p {
   padding: 3vh 10vw;
 }
 
-.analytics-row-item {
+.score-card-row-item {
   display: flex;
   flex-direction: row;
 }
-.analytics-row-item h3 {
+.score-card-row-item h3 {
   margin: 5px;
 }
 
@@ -96,5 +130,9 @@ p {
   }
   #main-info ul {
     padding: 0 0 0 20px;
+  }
+  .analytics-table-sets-inner-flex {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
