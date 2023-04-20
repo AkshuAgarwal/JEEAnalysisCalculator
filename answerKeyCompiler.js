@@ -5,7 +5,7 @@ This will return you the compiled json.
 */
 
 let rows = document.getElementById("ctl00_LoginContent_grAnswerKey").tBodies[0].rows;
-let mapping = {}
+let mapping = {};
 
 for (let i = 1; i < 91; i++) {
     let row = rows[i];
