@@ -57,7 +57,7 @@ p {
     width: 100%;
 
     table {
-        table-layout: fixed;
+        // table-layout: fixed;
         width: 100%;
         border-spacing: 5px;
         border-collapse: collapse;
@@ -143,19 +143,35 @@ p {
     display: none;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1140px) {
     #root {
         margin: 5vh 10vw;
     }
 
     #main-info {
         ul {
-            padding: 0 0 0 20px;
+            padding-inline-start: 20px;
+        }
+    }
+
+    #score-card {
+        ul {
+            padding-inline-start: 20px;
         }
     }
 
     .analytics-table-sets-inner-flex {
         flex-direction: column;
         align-items: center;
+    }
+
+    .back-card-wide-variant {
+        padding: 3vh 5vw;
+    }
+}
+
+@supports (-moz-appearance:none) {
+    selector {
+        table-layout: unset;
     }
 }
