@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -13,38 +13,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AkshuAgarwal">
+    <meta name="description"
+        content="An auto calculator and analyzer to analyze the responses marked in JEE Mains 2023 2nd (April) Attempt Paper-1 (B.E./B.Tech.)">
+    <meta name="keywords"
+        content="jee, mains, 2023, answer, key, 2nd, shift, april, attempt, akshuagarwal, calculator, analyze, analyse, analyzer, calculate">
+    <meta name="og:title" content="JEE Response Analyzer">
+    <meta name="og:type" content="website">
     <title>JEE Response Anaylser</title>
+    <!-- Thanks to r/jeeneetards subreddit (https://reddit.com/r/jeeneetards) for the favicon! -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="paperChecker.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
     <div id="root" class="center-flex-col">
         <div id="main-heading" class="center-flex-col back-card">
-            <h1>JEE Mains 2023 Response Analyser</h1>
+            <h1>JEE Mains 2023 (2nd Attempt) Response Analyser</h1>
             <p>Here you can upload your JEE Mains 2023 2nd Attempt Responses and get calculated marks along with brief
                 analytics.</p>
         </div>
         <div id="main-info" class="center-flex-col back-card">
-            <h2>How to upload?</h2>
+            <h2>How to use?</h2>
             <ul>
+                <h4>Note that since NTA removed the response sheet from their portal, only those who have it saved
+                    already (in .html/.mhtml/.xhtml/.htm extension) can use this analyzer.</h4>
                 <li>
-                    <p>Login to the NTA Portal.</p>
+                    <p>Locate the response page if you have it already saved from before (when NTA released provisional
+                        answer keys)</p>
                 </li>
                 <li>
-                    <p>Open the responses page (Click the BTech button to open the responses page in a new tab)</p>
-                </li>
-                <li>
-                    <p>After opening it, hit Ctrl+S (or basically save the webpage) anywhere in your device</p>
-                </li>
-                <li>
-                    <p>After saving, hit the Upload Responses button below and upload the HTML file generated from
-                        previous step.</p>
+                    <p>Hit the Upload Response File button below and upload the HTML file located from previous step.
+                    </p>
                 </li>
             </ul>
-            <h4>Note: Only HTML pages are accepted. If you're on mobile you might get an .aspx file instead of
-                .html. In that case, considering logging in through a PC and then repeating above steps.</h4>
         </div>
         <div id="upload-area" class="center-flex-col back-card back-card-wide-variant">
             <h2>Upload the Response File</h2>
@@ -53,7 +57,7 @@
                 <p id="upload-error-text-disp"></p>
             </div>
             <input type="file" id="response-document" accept=".html,.mhtml,.htm,.xhtml">
-            <button onClick="runAnalytics()">Calculate</button>
+            <button onClick="runAnalyzer()">Calculate</button>
         </div>
         <br>
         <div id="score-card" class="center-flex-col back-card back-card-wide-variant hidden-el">
@@ -61,12 +65,15 @@
             <div class="score-card-row-item">
                 <h3>Total marks:</h3>
                 <h3 id="data-total-marks"></h3>
-
             </div>
             <br>
             <div class="score-card-row-item">
-                <h3>Correct:</h3>
-                <h3 id="data-correct-questions"></h3>
+                <h3>Correct (Dropped included as per NTA's circular):</h3>
+                <h3 id="data-correct-questions-dropped-included"></h3>
+            </div>
+            <div class="score-card-row-item">
+                <h3>Dropped:</h3>
+                <h3 id="data-dropped-questions"></h3>
             </div>
             <div class="score-card-row-item">
                 <h3>Incorrect:</h3>
@@ -76,6 +83,26 @@
                 <h3>Not Attempted:</h3>
                 <h3 id="data-notattempted-questions"></h3>
             </div>
+            <ul>
+                <h2>Note:</h2>
+                <li>
+                    <p>For <b>6th Jan Morning Shift Candidates</b>, in the provisional final answer key the correct
+                        answer to one of the <b>integer</b> questions (ID: 7155053704) has been marked to be
+                        "3483638676", which seems very odd. So for now, idk what to do with this so it'll considered to
+                        be the correct answer as per analyzer. You can add +5 to your total score yourself if you have
+                        the correct answer.</p>
+                </li>
+                <li>
+                    <p>For <b>8th Jan Morning Shift Candidates</b>, one of the questions (ID: 3666943020) has been
+                        dropped but <b>only for Hindi Medium Candidates</b>. Since the response sheet doesn't include
+                        details about your medium of paper, the default answer has been set to "11" (what actually is
+                        the correct answer for other medium candidates). So if you're a Hindi Medium Candidate, if you
+                        marked this question (doesn't matter what), you can add +5 in your total score; but if you
+                        didn't mark anything (left it empty), according to NTA's circular no marks will be awarded for
+                        this, so add +1 to your total score to neutralize the negative score by the analyzer.
+                    </p>
+                </li>
+            </ul>
         </div>
         <div id="analytics" class="center-flex-col back-card hidden-el">
             <h2 class="analytics-table-root-heading">Analytics</h2>

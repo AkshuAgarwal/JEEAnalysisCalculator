@@ -1,0 +1,6 @@
+For 06th April Shift 1st (Morning), in the provisional final answer key the correct answer to one of the integer questions is marked to be "3483638676" which is very odd.
+It seems to be a mistake from NTA while making final provisional answer key.
+But since there's no confirmation for the same, the analyzer considers this value to be the correct answer.
+
+For 08th April Shift 1st (Morning), Question ID "3666943020" is "DROP" for Hindi Medium but is valid for other mediums with "11" as correct answer.
+Default answer marked in answer key is 11 since Response Page doesn't include medium of paper, there's no way of knowing what medium the sheet uploaded belongs to.
